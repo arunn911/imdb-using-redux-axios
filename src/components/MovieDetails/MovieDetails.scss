@@ -1,0 +1,66 @@
+@import "../../common/colors.scss";
+
+.movie-section{
+    color: $font-primary;
+    display: flex;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+
+    .section-left{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .section-right{
+        flex: 3;
+    }
+}
+.loading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.movie-rating{
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    .rating-type{
+        display: flex;
+    align-items: center;
+    }
+    .rating-type span{
+        margin-right: 8px;
+        color: $font-secondary;
+    }
+}
+.section-right{
+    .movie-plot{
+        margin-top: 20px;
+    line-height: 1.8;
+    }
+}
+.movie-info{
+    margin-top: 10px;
+    line-height: 1.8;
+}
+.movie-info > div span:first-child{
+    margin-right: 10px;
+}
+.movie-info > div span:last-child{
+    color:$font-secondary;
+}
+
+
+
+
+/// media queries
+@media screen and (max-width: 900px) {
+    .movie-section{
+        flex-direction: column;
+    }
+  }
