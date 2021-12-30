@@ -41,7 +41,8 @@ export const fetchSearchMovies = createAsyncThunk(
     async (movie) => {
 
         const response = await movieApi
-                .get(`?apiKey=${APIKey}&s=${movie}&type=movie`);
+                .get(`?apiKey=${APIKey}&s=${movie}&type=movie`,
+                {headers: { 'Content-Type': 'application/json',"Access-Control-Allow-Origin": "*"}});
            return response.data;
     }
 );
